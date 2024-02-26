@@ -33,11 +33,16 @@ const App = () => {
 
     return (
         <div className='app'>
-            <button className='menu'>
+            {/* <button className='menu'>
                 menu
-            </button>
+            </button> */}
 
-            <h1>MovieLand</h1>
+            {/* <h1>MovieLand</h1> */}
+            <img
+                src='logo.png'
+                alt='MovieLand'
+                className="movieHeader"
+            />
 
             <div className='search'>
                 <input
@@ -47,12 +52,13 @@ const App = () => {
                         setSearchTerm(event.target.value)
                     }}
                 />
-                <img
+                <img key="searchIconKey"
                     src={searchIcon}
                     alt="search"
                     onClick={() => fetchMovies(searchTerm)}
                 />
             </div>
+
             {movies?.length > 0 ? (
                     <div className="container">
                         {movies.map((movie) => (
