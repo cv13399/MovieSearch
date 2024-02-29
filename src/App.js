@@ -10,7 +10,7 @@ const App = () => {
     // let sampleMovie = staticMovies[0];
 
     const [movies, setMovies] = useState([]);
-    const [searchTerm, setSearchTerm] = useState("");
+    const [searchTerm, setSearchTerm] = useState(""); 
 
     // get movie data from API
     const fetchMovies = async(title) =>{
