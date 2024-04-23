@@ -4,7 +4,7 @@ import searchIcon from './search.svg';
 // import staticMovies from './staticMovieData';
 import MovieCard from './MovieCard.jsx';
 
-const api_url = 'http://www.omdbapi.com?apikey=b5b87478';
+const api_url = 'https://www.omdbapi.com?apikey=b5b87478';
 
 const App = () => {
     // let sampleMovie = staticMovies[0];
@@ -59,7 +59,8 @@ const App = () => {
                 />
             </div>
 
-            {movies?.length > 0 ? (
+            {
+                movies?.length > 0 ? (
                     <div className="container">
                         {movies.map((movie) => (
                             <MovieCard movie={movie} />
